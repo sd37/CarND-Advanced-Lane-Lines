@@ -18,11 +18,6 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image4]: ./examples/warped_straight_lines.jpg "Warp Example"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[image6]: ./examples/example_output.jpg "Output"
-[video1]: ./project_video_soln.mp4 "Video"
-
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 ###Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
@@ -41,7 +36,7 @@ Please see the notebook code cell 1, compute camera calibration for chessboard i
 ###Pipeline (single images)
 
 ####1. Provide an example of a distortion-corrected image.
-Please refer to solution.ipnyb code cell number 5-6 for this. Over there I have first undistorted the image and then performed the perspective transform.
+Please refer to solution.ipynb code cell number 5-6 for this. Over there I have first undistorted the image and then performed the perspective transform.
 
 Apt visulizations have been generated.
 
@@ -50,7 +45,6 @@ Apt visulizations have been generated.
 
 Please refer to code cells 7-9 for this. I tried several thresholding scheme. In the end I used the color-grad threshold as visulized in cell 9.
 
-![alt text][image3]
 
 ####3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -98,7 +92,7 @@ a search in a margin around previously detected lane.
 
 I also used the curvature of the detected lanes to sanitize it and compared it with the curvature of already detected lanes to decide whether to perform a full search or not.
 
-I think implementation of smoothing approach discussed in the lectures and making use of the position the vehicle for deciding to do the full search for lane can make the pipeline
+I think implementation of smoothing approach discussed in the lectures and making use of the position of the vehicle for deciding to do the full search for lane can make the pipeline
 more robust. Unfortunately, did not have time to invest in this.
 
 Please let me know of other possible ways as well and references.
