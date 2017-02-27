@@ -36,31 +36,25 @@ You're reading it!
 
 ####1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
-The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
-
-I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
-
-I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
-
-Please see the notebook cell 2, compute camera calibration and distortion for the images.
+Please see the notebook code cell 1, compute camera calibration for chessboard images for this.
 
 ###Pipeline (single images)
 
 ####1. Provide an example of a distortion-corrected image.
-Please refer to solution.ipnyb cell number 5-6 for this. Over there I have first undistorted the image and then performed the perspective transform.
+Please refer to solution.ipnyb code cell number 5-6 for this. Over there I have first undistorted the image and then performed the perspective transform.
 
 Apt visulizations have been generated.
 
 
 ####2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-Please refer to cells 7-9 for this. I tried several thresholding scheme. In the end I used the color-grad threshold as visulized in cell 9.
+Please refer to code cells 7-9 for this. I tried several thresholding scheme. In the end I used the color-grad threshold as visulized in cell 9.
 
 ![alt text][image3]
 
 ####3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-Please refer to solution.ipnyb cell number 5-6 for this. Over there I have first undistorted the image and then performed the perspective transform.
+Please refer to solution.ipynb cell number 5-6 for this. Over there I have first undistorted the image and then performed the perspective transform.
 The is similar to the one discussed in the lectures. It also describes what src and dst points I have used. This was recommended by some good people on the udacity forum.
 
 Apt visulizations have been generated.
@@ -68,13 +62,13 @@ Apt visulizations have been generated.
 
 ####4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+Please refer to solution.ipynb code cells 9-10-11 for this. It is similar to the approach described in lectures and code is there in the cells.
 
-![alt text][image5]
 
 ####5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines # through # in my code in `my_other_file.py`
+Please refert to solution.ipnyb code cells 9 def_compute_radc() for this.
+
 
 ####6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
