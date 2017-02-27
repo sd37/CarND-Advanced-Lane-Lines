@@ -32,6 +32,10 @@ You're reading it!
 ####1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
 Please see the notebook code cell 1, compute camera calibration for chessboard images for this.
+I performed this on the test image provided by the ta in the lectures.
+
+![alt text](./output_images/chessboard.png)
+
 
 ###Pipeline (single images)
 
@@ -39,12 +43,14 @@ Please see the notebook code cell 1, compute camera calibration for chessboard i
 Please refer to solution.ipynb code cell number 5-6 for this. Over there I have first undistorted the image and then performed the perspective transform.
 
 Apt visulizations have been generated.
+![alt text](./output_images/undistorted.png)
 
 
 ####2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
 Please refer to code cells 7-9 for this. I tried several thresholding scheme. In the end I used the color-grad threshold as visulized in cell 9.
 
+![alt text](./output_images/thres-col-grad.png)
 
 ####3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -53,10 +59,13 @@ The is similar to the one discussed in the lectures. It also describes what src 
 
 Apt visulizations have been generated.
 
+![alt text](./output_images/perspective.png)
 
 ####4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Please refer to solution.ipynb code cells 9-10-11 for this. It is similar to the approach described in lectures and code is there in the cells.
+
+![alt text](./output_images/poly-fit.png)
 
 
 ####5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
@@ -68,13 +77,16 @@ Please refert to solution.ipnyb code cells 9 def_compute_radc() for this.
 
 Please see cell 15-16. Here lanes have been drawn on several test images.
 
+
+![alt text](./output_images/lane_mapping.png)
+
 ---
 
 ###Pipeline (video)
 
 ####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video_soln_final.mp4).
+Here's a [link to my video result](https://github.com/sd37/CarND-Advanced-Lane-Lines/blob/master/project_video_soln_final.mp4)
 
 There is a little wobble in the middle of the video when there is a huge shadow on the street, were it detects the railing as part of the lane.
 It quickly is able to rectify this. Would love to know how this is solved.
